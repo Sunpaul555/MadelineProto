@@ -113,9 +113,9 @@ trait Loop
      */
     public function stop(): void
     {
-        if (!$this->hasEventHandler()) {
+        /*if (!$this->hasEventHandler()) {
             throw new Exception("Can't use this method if no event handler is running!");
-        }
+        }*/
         Shutdown::removeCallback('restarter');
         $this->restart();
     }
