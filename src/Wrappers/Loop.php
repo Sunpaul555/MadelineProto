@@ -125,9 +125,9 @@ trait Loop
     public function restart(): void
     {
         if (!$this->hasEventHandler()) {
-            if (Magic::$isIpcWorker) {
+            /*if (Magic::$isIpcWorker) {
                 EventLoop::queue(static fn () => throw new SignalException('Restarting IPC daemon!'));
-            }
+            }*/
             return;
         }
         $deferred = $this->stopDeferred ?? new DeferredFuture;
