@@ -98,7 +98,7 @@ final class ProcessRunner extends RunnerAbstract
             (string) $startupId,
         ];
         $command = implode(' ', array_map(escapeArgument(...), $command));
-        Logger::log("Starting process with $command");
+        //Logger::log("Starting process with $command");
 
         $params = [
             'argv' => ['madeline-ipc', $session, $startupId],
