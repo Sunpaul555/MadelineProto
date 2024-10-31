@@ -150,7 +150,7 @@ final class ProcessRunner extends RunnerAbstract
                 $chunk = explode("\n", str_replace(["\r", "\n\n"], "\n", $chunk));
                 $lastLine .= array_shift($chunk);
                 while ($chunk) {
-                    Logger::log("Got message from worker: $lastLine");
+                    //Logger::log("Got message from worker: $lastLine");
                     $lastLine = array_shift($chunk);
                 }
             }
